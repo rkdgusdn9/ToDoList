@@ -7,6 +7,14 @@ h1 {
   text-align: center;
 }
 
+.submit {
+  background-color: forestgreen;
+  color: white;
+  border: none;
+  border-radius: 5%;
+  font-size: medium;
+}
+
 .main-Container {
   display: flex;
   background-color: darkolivegreen;
@@ -22,7 +30,7 @@ h1 {
 }
 
 #toDoList {
-  margin-bottom: 2%;
+  margin-bottom: 10%;
   text-align: center;
 }
 
@@ -35,10 +43,20 @@ h1 {
 
 .delete {
   float: right;
+  background-color: red;
+  border: none;
+  border-radius: 5%;
+  font-size: medium;
+  color: white;
+}
+
+li {
+  cursor: pointer;
+  margin-bottom: 2%;
+  font-size: x-large;
 }
 
 ul li.done {
-  cursor: pointer;
   list-style: none;
   transition: 0.2s;
   text-decoration: line-through;
