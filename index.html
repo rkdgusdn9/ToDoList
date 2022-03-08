@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Page Title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>My ToDoList</title>
   </head>
   <body>
-    <h1>This is a Heading</h1>
-    <p>This is a paragraph.</p>
+    <div class="main-Container">
+      <div class="input-Container">
+        <div class="greeting-Container">
+          <h1>Hello, Ben!</h1>
+        </div>
+        <form id="toDoList">
+          <input id="listInput" type="text" placeholder="Write what to do" />
+          <button class="submit">Submit</button>
+        </form>
+        <ul id="toDo"></ul>
+      </div>
+    </div>
+    <script src="javascript.js"></script>
   </body>
 </html>

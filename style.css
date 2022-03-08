@@ -1,0 +1,50 @@
+body,
+html {
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.main-Container {
+  display: flex;
+  background-color: darkolivegreen;
+  height: 100vh;
+}
+
+.input-Container {
+  align-self: center;
+  margin: auto;
+  background-color: whitesmoke;
+  width: 50%;
+  height: 50%;
+}
+
+#toDoList {
+  margin-bottom: 2%;
+  text-align: center;
+}
+
+.done {
+  text-decoration: line-through;
+  color: darkgreen;
+  position: absolute;
+}
+
+#toDo {
+  position: relative;
+  padding-right: 8.5%;
+  font-size: large;
+}
+
+.delete {
+  float: right;
+}
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  list-style: none;
+  transition: 0.2s;
+}
