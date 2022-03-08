@@ -26,25 +26,27 @@ h1 {
   text-align: center;
 }
 
-.done {
-  text-decoration: line-through;
-  color: darkgreen;
-  position: absolute;
-}
-
 #toDo {
   position: relative;
   padding-right: 8.5%;
   font-size: large;
+  list-style: none;
 }
 
 .delete {
   float: right;
 }
 
-ul li {
+ul li.done {
   cursor: pointer;
-  position: relative;
   list-style: none;
   transition: 0.2s;
+  text-decoration: line-through;
+  color: darkgreen;
+}
+
+ul li.done::after {
+  position: absolute;
+  content: "Done!";
+  margin-left: 5%;
 }

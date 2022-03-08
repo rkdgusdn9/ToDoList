@@ -1,18 +1,25 @@
 const submitButton = document.querySelector(".submit");
-const toDoList = document.querySelector("#toDo");
+const toDoList = document.querySelector("ul");
 
 const deleteListElement = function () {
   this.parentElement.remove();
 };
 
-const liClick = function () {
-  toDoList.classList.toggle("done");
-};
+toDoList.addEventListener(
+  "click",
+  function (e) {
+    if (e.target.tagName === "LI") {
+      e.target.classList.toggle("done");
+    }
+  },
+  false
+);
 
 submitButton.addEventListener("click", function (e) {
   const inputValue = document.getElementById("listInput").value;
   const t = document.createTextNode(inputValue);
   const li = document.createElement("li");
+
   li.appendChild(t);
   if (inputValue === "") {
     alert("Write something to do!");
@@ -20,7 +27,6 @@ submitButton.addEventListener("click", function (e) {
     document.getElementById("toDo").appendChild(li);
   }
   document.getElementById("listInput").value = "";
-  e.preventDefault();
 
   const delButton = document.createElement("button");
   const buttonTxt = document.createTextNode("Delete");
@@ -29,5 +35,5 @@ submitButton.addEventListener("click", function (e) {
   li.appendChild(delButton);
 
   delButton.addEventListener("click", deleteListElement);
-  li.addEventListener("click", liClick);
+  e.preventDefault();
 });
