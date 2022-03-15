@@ -42,6 +42,7 @@ h1 {
 }
 
 .delete {
+  cursor: pointer;
   float: right;
   background-color: red;
   border: none;
